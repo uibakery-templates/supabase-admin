@@ -7,6 +7,9 @@ steps:
     type: LOAD_COLLECTION
     name: load
     params:
+      - type: datasourceId
+        value: '[Sample] Supabase admin'
+        valueType: string
       - type: resourceId
         value: public.subscriptions
         valueType: string
@@ -33,16 +36,27 @@ steps:
         value: ''
         valueType: interpolatedValue
       - type: successMapper
-        value: ''
+        value: >-
+          const dayDateString = (date) => new
+          Date(date).toISOString().replace(/T.+$/, '');
+
+
+          return {{data}}.map(({ begin_timestamp, end_timestamp, ...rest }) => {
+            begin_timestamp = dayDateString(begin_timestamp);
+            end_timestamp = dayDateString(end_timestamp);
+            return {
+              ...rest,
+              begin_timestamp,
+              end_timestamp,
+              duration: dateDiff(end_timestamp, begin_timestamp),
+            };
+          });
         valueType: interpolatedValue
       - type: failureMapper
         value: ''
         valueType: interpolatedValue
       - type: mapperEnabled
-        value: false
-        valueType: custom
-      - type: datasourceId
-        value: '[Sample] Supabase admin'
+        value: true
         valueType: custom
     level: 0
     fallthroughError: false

@@ -17,9 +17,9 @@ styles:
 properties:
   data: >-
     Object.entries(Object.groupBy({{actions.loadPrices.data}}, ({ product_id })
-    => product_id)).map(([productId, prices]) => ({
+    => product_id)).map(([productId, { length }]) => ({
       productId,
-      priceCount: prices.length,
+      priceCount: length,
     }));
   name: productsMetric2
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:

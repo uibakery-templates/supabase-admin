@@ -3,10 +3,26 @@ metadata:
   favicon: ''
   code: |-
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
     <script>
       const sortedUniqueDates = (dates) => [...new Set(dates)].sort((lhs, rhs) => new Date(lhs) - new Date(rhs));
 
-      const dateDiff = (lhs, rhs) => (units) => dayjs(lhs).diff(rhs, units, true);
+      const dateDiff = (lhs, rhs) => {
+        // https://day.js.org/docs/en/display/difference
+        const diff = (units) => dayjs(lhs).diff(rhs, units, true);
+
+        // object like syntax is more readable
+        class DateDiff {
+          get year() {
+            return diff("y");
+          }
+          get month() {
+            return diff("M");
+          }
+        }
+
+        return new DateDiff();
+      };
 
       /**
        * @param {number} hue from 0 to 360

@@ -15,7 +15,11 @@ styles:
       w: 24
       h: 28
 properties:
-  data: '{{actions.subscriptionDuration.data}};'
+  data: |-
+    {{actions.loadSubscriptions.data}}.map(({ duration, ...rest }) => ({
+      ...rest,
+      duration: duration.year,
+    }));
   name: averageSubscriptionDuratioinMetric
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
@@ -25,7 +29,7 @@ properties:
   groupType: not_group
   showLoading:
     value: false
-    dataValue: '{{actions.subscriptionDuration.loading}}'
+    dataValue: '{{actions.loadSubscriptions.loading}}'
     withData: true
 actions: {}
 slots:
