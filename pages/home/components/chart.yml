@@ -373,7 +373,10 @@ properties:
       animationDuration: 1000,
       title: {
         text: 'Product revenue timeline',
-        padding: 10,
+        textStyle: {
+          fontSize: 12,
+        },
+        padding: 12,
       },
       tooltip: {
         trigger: 'axis',
@@ -381,8 +384,8 @@ properties:
           type: 'cross',
         },
         formatter: (params) => {
-          const total = params.reduce((subTotal, param) => subTotal + param.data, 0);
-          return params.map((param) => `${param.seriesName}: ${param.data.toFixed(2)}(${((param.data / total) * 100).toFixed(2)}%)`).join('<br/>');
+          const total = params.reduce((subTotal, { value }) => subTotal + value, 0);
+          return params.map(({ seriesName, value }) => `${seriesName}: $${value.toFixed(2)} (${((value / total) * 100).toFixed(2)}%)`).join('<br/>');
         },
       },
       legend: {
@@ -395,7 +398,7 @@ properties:
       ],
       grid: {
         left: '2%',
-        right: '2%',
+        right: '3%',
         bottom: '5.5%',
         height: '80%',
         containLabel: true,

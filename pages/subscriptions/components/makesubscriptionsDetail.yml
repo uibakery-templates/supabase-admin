@@ -36,8 +36,8 @@ properties:
       ]
     withData: false
   entity: >-
-    {{actions.makeSubscriptions.data.mostSubscribedProducts.findLast(({ active
-    }) => active)}}
+    {{actions.makeSubscriptions.data}}.mostSubscribedProducts.findLast(({ active
+    }) => active);
   name: makesubscriptionsDetail
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
