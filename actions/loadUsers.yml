@@ -1,0 +1,69 @@
+id: '17004761001230.4699762181942342'
+kind: workflow
+name: loadUsers
+nameConfigured: true
+steps:
+  - id: '17014256893960.45828621125231495'
+    type: LOAD_COLLECTION
+    name: load
+    params:
+      - type: resourceId
+        value: public.users
+        valueType: string
+      - type: filters
+        value: []
+        valueType: custom
+      - type: ordering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+      - type: additionalParams
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: return {{data}}
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+      - type: datasourceId
+        value: '[Sample] Supabase admin'
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+mode: manual
+modeConfigured: false
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadUsers.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadUsers.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.loadUsers.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: true
+selected: true
+configured: true
+index: 0

@@ -1,0 +1,432 @@
+id: '17008556191060.23677003312006706'
+definitionId: chart
+parentSlotId: '17006760150280.5289670008586795'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 54
+      w: 24
+      h: 112
+  xs:
+    gridItem:
+      x: 0
+      y: 80
+      w: 24
+      h: 80
+properties:
+  dataset: |-
+    [
+      {
+        "id": 1,
+        "full_name": "Susan Williamson",
+        "first_name": "Susan",
+        "last_name": "Williamson",
+        "username": "sWilliamson",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-00.png",
+        "email": "Kyla_Considine@hotmail.com",
+        "email_verified": true,
+        "phone": "808.797.1741",
+        "twitter_handle": "sWilliamson",
+        "bio": "Friendly music geek. Organizer. Twitter scholar. Creator. General food nerd. Future teen idol. Thinker.",
+        "created_at": "2022-08-20T11:20:02.688Z"
+      },
+      {
+        "id": 2,
+        "full_name": "Henrietta Wagner",
+        "first_name": "Henrietta",
+        "last_name": "Wagner",
+        "username": "hWagner",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-01.png",
+        "email": "Betsy46@gmail.com",
+        "email_verified": true,
+        "phone": "903-894-7300",
+        "twitter_handle": "hWagner",
+        "bio": "Travel lover. Explorer. Analyst. Subtly charming pop culture aficionado. Friendly creator.",
+        "created_at": "2022-08-19T11:20:02.688Z"
+      },
+      {
+        "id": 3,
+        "full_name": "Lydia Snyder",
+        "first_name": "Lydia",
+        "last_name": "Snyder",
+        "username": "lSnyder",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-02.png",
+        "email": "Jordi.Mayert@hotmail.com",
+        "email_verified": false,
+        "phone": "1-690-361-8055 x579",
+        "twitter_handle": "lSnyder",
+        "bio": "Coffee expert. Tv nerd. Proud music fan. Bacon guru. Analyst. Subtly charming gamer.",
+        "created_at": "2022-08-18T11:20:02.688Z"
+      },
+      {
+        "id": 4,
+        "full_name": "Harold Herrera",
+        "first_name": "Harold",
+        "last_name": "Herrera",
+        "username": "hHerrera",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-03.png",
+        "email": "Hope_Anderson93@gmail.com",
+        "email_verified": false,
+        "phone": "550-705-6463 x76546",
+        "twitter_handle": "hHerrera",
+        "bio": "Creator. Unapologetic introvert. Coffee evangelist. Evil music enthusiast. Bacon trailblazer. Troublemaker.",
+        "created_at": "2022-08-15T11:20:02.688Z"
+      },
+      {
+        "id": 5,
+        "full_name": "Richard Garrett",
+        "first_name": "Richard",
+        "last_name": "Garrett",
+        "username": "rGarrett",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-04.png",
+        "email": "Tobin_Streich9@yahoo.com",
+        "email_verified": false,
+        "phone": "967.481.3949 x0203",
+        "twitter_handle": "rGarrett",
+        "bio": "Travel fanatic. Devoted explorer. Social media maven. Proud analyst. Bacon geek. Zombie ninja. Problem solver. Student. Amateur alcohol practitioner. Thinker.",
+        "created_at": "2022-08-19T11:20:02.688Z"
+      },
+      {
+        "id": 6,
+        "full_name": "Lee Bates",
+        "first_name": "Lee",
+        "last_name": "Bates",
+        "username": "lBates",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-05.png",
+        "email": "Maye.Miller@hotmail.com",
+        "email_verified": true,
+        "phone": "228.972.8913 x86724",
+        "twitter_handle": "lBates",
+        "bio": "Music ninja. Friend of animals everywhere. Lifelong thinker. Alcohol scholar. Social media expert.",
+        "created_at": "2022-08-19T11:20:02.688Z"
+      },
+      {
+        "id": 7,
+        "full_name": "Jesus Newman",
+        "first_name": "Jesus",
+        "last_name": "Newman",
+        "username": "jNewman",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-06.png",
+        "email": "Ceasar_Sanford3@hotmail.com",
+        "email_verified": false,
+        "phone": "741-463-9786",
+        "twitter_handle": "jNewman",
+        "bio": "Friendly music geek. Organizer. Twitter scholar. Creator. General food nerd. Future teen idol. Thinker.",
+        "created_at": "2022-08-16T11:20:02.688Z"
+      },
+      {
+        "id": 8,
+        "full_name": "Polly Kennedy",
+        "first_name": "Polly",
+        "last_name": "Kennedy",
+        "username": "pKennedy",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-07.png",
+        "email": "Kendrick_Tromp@hotmail.com",
+        "email_verified": false,
+        "phone": "727.246.2165 x3061",
+        "twitter_handle": "pKennedy",
+        "bio": "Travel lover. Explorer. Analyst. Subtly charming pop culture aficionado. Friendly creator.",
+        "created_at": "2022-08-15T11:20:02.688Z"
+      },
+      {
+        "id": 9,
+        "full_name": "Augusta Stevenson",
+        "first_name": "Augusta",
+        "last_name": "Stevenson",
+        "username": "aStevenson",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-08.png",
+        "email": "Ofelia_Lehner24@yahoo.com",
+        "email_verified": true,
+        "phone": "1-992-487-8671 x46778",
+        "twitter_handle": "aStevenson",
+        "bio": "Coffee expert. Tv nerd. Proud music fan. Bacon guru. Analyst. Subtly charming gamer.",
+        "created_at": "2022-08-19T11:20:02.688Z"
+      },
+      {
+        "id": 10,
+        "full_name": "Tyler Perkins",
+        "first_name": "Tyler",
+        "last_name": "Perkins",
+        "username": "tPerkins",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-09.png",
+        "email": "Leda20@gmail.com",
+        "email_verified": false,
+        "phone": "870.226.2928",
+        "twitter_handle": "tPerkins",
+        "bio": "Creator. Unapologetic introvert. Coffee evangelist. Evil music enthusiast. Bacon trailblazer. Troublemaker.",
+        "created_at": "2022-08-15T11:20:02.688Z"
+      },
+      {
+        "id": 11,
+        "full_name": "Allie Burns",
+        "first_name": "Allie",
+        "last_name": "Burns",
+        "username": "aBurns",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-10.png",
+        "email": "Justina67@gmail.com",
+        "email_verified": false,
+        "phone": "220.706.3173",
+        "twitter_handle": "aBurns",
+        "bio": "Travel fanatic. Devoted explorer. Social media maven. Proud analyst. Bacon geek. Zombie ninja. Problem solver. Student. Amateur alcohol practitioner. Thinker.",
+        "created_at": "2022-08-19T11:20:02.688Z"
+      },
+      {
+        "id": 12,
+        "full_name": "Gordon Murray",
+        "first_name": "Gordon",
+        "last_name": "Murray",
+        "username": "gMurray",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-11.png",
+        "email": "Polly22@gmail.com",
+        "email_verified": true,
+        "phone": "1-368-257-6876",
+        "twitter_handle": "gMurray",
+        "bio": "Music ninja. Friend of animals everywhere. Lifelong thinker. Alcohol scholar. Social media expert.",
+        "created_at": "2022-08-20T11:20:02.688Z"
+      },
+      {
+        "id": 13,
+        "full_name": "Ronald Casey",
+        "first_name": "Ronald",
+        "last_name": "Casey",
+        "username": "rCasey",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-12.png",
+        "email": "Daniela.Barton@gmail.com",
+        "email_verified": true,
+        "phone": "1-772-620-7291",
+        "twitter_handle": "rCasey",
+        "bio": "Friendly music geek. Organizer. Twitter scholar. Creator. General food nerd. Future teen idol. Thinker.",
+        "created_at": "2022-08-14T11:20:02.688Z"
+      },
+      {
+        "id": 14,
+        "full_name": "Rodney Malone",
+        "first_name": "Rodney",
+        "last_name": "Malone",
+        "username": "rMalone",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-13.png",
+        "email": "Jane.Hettinger@hotmail.com",
+        "email_verified": true,
+        "phone": "447-239-0002 x5891",
+        "twitter_handle": "rMalone",
+        "bio": "Travel lover. Explorer. Analyst. Subtly charming pop culture aficionado. Friendly creator.",
+        "created_at": "2022-08-19T11:20:02.688Z"
+      },
+      {
+        "id": 15,
+        "full_name": "Louis Sandoval",
+        "first_name": "Louis",
+        "last_name": "Sandoval",
+        "username": "lSandoval",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-14.png",
+        "email": "Linnie_Predovic@yahoo.com",
+        "email_verified": true,
+        "phone": "809.788.1344",
+        "twitter_handle": "lSandoval",
+        "bio": "Coffee expert. Tv nerd. Proud music fan. Bacon guru. Analyst. Subtly charming gamer.",
+        "created_at": "2022-08-20T11:20:02.688Z"
+      },
+      {
+        "id": 16,
+        "full_name": "Antonio Pierce",
+        "first_name": "Antonio",
+        "last_name": "Pierce",
+        "username": "aPierce",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-15.png",
+        "email": "Demetrius.Medhurst@hotmail.com",
+        "email_verified": false,
+        "phone": "296-305-8382 x0423",
+        "twitter_handle": "aPierce",
+        "bio": "Creator. Unapologetic introvert. Coffee evangelist. Evil music enthusiast. Bacon trailblazer. Troublemaker.",
+        "created_at": "2022-08-14T11:20:02.688Z"
+      },
+      {
+        "id": 17,
+        "full_name": "Joe Myers",
+        "first_name": "Joe",
+        "last_name": "Myers",
+        "username": "jMyers",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-16.png",
+        "email": "Christiana_Pollich@hotmail.com",
+        "email_verified": true,
+        "phone": "680-320-5906",
+        "twitter_handle": "jMyers",
+        "bio": "Travel fanatic. Devoted explorer. Social media maven. Proud analyst. Bacon geek. Zombie ninja. Problem solver. Student. Amateur alcohol practitioner. Thinker.",
+        "created_at": "2022-08-19T11:20:02.688Z"
+      },
+      {
+        "id": 18,
+        "full_name": "Manuel Moss",
+        "first_name": "Manuel",
+        "last_name": "Moss",
+        "username": "mMoss",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-17.png",
+        "email": "Alva.Macejkovic46@hotmail.com",
+        "email_verified": true,
+        "phone": "(751) 984-4844",
+        "twitter_handle": "mMoss",
+        "bio": "Music ninja. Friend of animals everywhere. Lifelong thinker. Alcohol scholar. Social media expert.",
+        "created_at": "2022-08-16T11:20:02.688Z"
+      },
+      {
+        "id": 19,
+        "full_name": "George Johnson",
+        "first_name": "George",
+        "last_name": "Johnson",
+        "username": "gJohnson",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-18.png",
+        "email": "Enrique.Spinka@yahoo.com",
+        "email_verified": true,
+        "phone": "879.780.7911",
+        "twitter_handle": "gJohnson",
+        "bio": "Friendly music geek. Organizer. Twitter scholar. Creator. General food nerd. Future teen idol. Thinker.",
+        "created_at": "2022-08-19T11:20:02.688Z"
+      },
+      {
+        "id": 20,
+        "full_name": "Jose Curry",
+        "first_name": "Jose",
+        "last_name": "Curry",
+        "username": "jCurry",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-00.png",
+        "email": "Merle.Keeling5@gmail.com",
+        "email_verified": true,
+        "phone": "594-630-5581",
+        "twitter_handle": "jCurry",
+        "bio": "Travel lover. Explorer. Analyst. Subtly charming pop culture aficionado. Friendly creator.",
+        "created_at": "2022-08-17T11:20:02.688Z"
+      },
+      {
+        "id": 21,
+        "full_name": "Elva Brock",
+        "first_name": "Elva",
+        "last_name": "Brock",
+        "username": "eBrock",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-01.png",
+        "email": "Susana.Mayer49@hotmail.com",
+        "email_verified": true,
+        "phone": "421-704-9122 x822",
+        "twitter_handle": "eBrock",
+        "bio": "Coffee expert. Tv nerd. Proud music fan. Bacon guru. Analyst. Subtly charming gamer.",
+        "created_at": "2022-08-15T11:20:02.688Z"
+      },
+      {
+        "id": 22,
+        "full_name": "Mittie Rodriguez",
+        "first_name": "Mittie",
+        "last_name": "Rodriguez",
+        "username": "mRodriguez",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-02.png",
+        "email": "Jasper.Runolfsson85@hotmail.com",
+        "email_verified": false,
+        "phone": "1-348-884-1254",
+        "twitter_handle": "mRodriguez",
+        "bio": "Creator. Unapologetic introvert. Coffee evangelist. Evil music enthusiast. Bacon trailblazer. Troublemaker.",
+        "created_at": "2022-08-17T11:20:02.688Z"
+      },
+      {
+        "id": 23,
+        "full_name": "Dylan Valdez",
+        "first_name": "Dylan",
+        "last_name": "Valdez",
+        "username": "dValdez",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-03.png",
+        "email": "Chauncey.Romaguera37@yahoo.com",
+        "email_verified": true,
+        "phone": "1-886-697-4093 x13638",
+        "twitter_handle": "dValdez",
+        "bio": "Travel fanatic. Devoted explorer. Social media maven. Proud analyst. Bacon geek. Zombie ninja. Problem solver. Student. Amateur alcohol practitioner. Thinker.",
+        "created_at": "2022-08-17T11:20:02.688Z"
+      },
+      {
+        "id": 24,
+        "full_name": "Evelyn Ray",
+        "first_name": "Evelyn",
+        "last_name": "Ray",
+        "username": "eRay",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-04.png",
+        "email": "Yasmine_Jenkins@yahoo.com",
+        "email_verified": false,
+        "phone": "1-721-479-4097 x97303",
+        "twitter_handle": "eRay",
+        "bio": "Music ninja. Friend of animals everywhere. Lifelong thinker. Alcohol scholar. Social media expert.",
+        "created_at": "2022-08-17T11:20:02.688Z"
+      },
+      {
+        "id": 25,
+        "full_name": "Matilda Castillo",
+        "first_name": "Matilda",
+        "last_name": "Castillo",
+        "username": "mCastillo",
+        "avatar": "https://sauibakeryprod.blob.core.windows.net/mock-database-assets/users-avatars/user-05.png",
+        "email": "Christ.Brown@hotmail.com",
+        "email_verified": true,
+        "phone": "480.726.9164 x161",
+        "twitter_handle": "mCastillo",
+        "bio": "Friendly music geek. Organizer. Twitter scholar. Creator. General food nerd. Future teen idol. Thinker.",
+        "created_at": "2022-08-15T11:20:02.688Z"
+      }
+    ]
+  config: |-
+    return {
+      animationDuration: 1000,
+      title: {
+        text: 'Product revenue timeline',
+        padding: 10,
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'cross',
+        },
+        formatter: (params) => {
+          const total = params.reduce((subTotal, param) => subTotal + param.data, 0);
+          return params.map((param) => `${param.seriesName}: ${param.data.toFixed(2)}(${((param.data / total) * 100).toFixed(2)}%)`).join('<br/>');
+        },
+      },
+      legend: {
+        padding: 30,
+        show: true,
+      },
+      dataZoom: [
+        { type: 'inside', start: 0, end: 100 },
+        { type: 'slider', start: 0, end: 100, handleSize: 30 },
+      ],
+      grid: {
+        left: '2%',
+        right: '2%',
+        bottom: '5.5%',
+        height: '80%',
+        containLabel: true,
+      },
+      xAxis: {
+        boundaryGap: false,
+        data: {{actions.makeRevenue.data.xAxies}},
+      },
+      yAxis: {},
+      series: {{actions.makeRevenue.data.revenueByProductSeries}},
+      color: {{actions.makeRevenue.data.revenueByProductSeries}}.map((_, i, { length }) => `${hsl2rgb((300 * i) / length)}7f`),
+    };
+  name: chart
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Chart
+  type: lineChart
+  structure:
+    - title: Chart
+      data: []
+      color: primary
+      xProp: created_at
+      yProp: id
+      __UIBAKERY__SYSTEM_ID__: '17008556191770.6002628641161107'
+      groupType: day
+      groupFunctionType: count
+  showLoading:
+    value: false
+    dataValue: '{{actions.makeRevenue.loading}}'
+    withData: true
+  useJsConfig: echarts
+actions: {}
+slots: []

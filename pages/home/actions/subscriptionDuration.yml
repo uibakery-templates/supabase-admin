@@ -1,0 +1,60 @@
+id: '17013266235670.9317115634945585'
+kind: workflow
+name: subscriptionDuration
+nameConfigured: true
+steps:
+  - id: '17013266293800.2852752327623258'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17004781044190.30870112091998436'
+        valueType: string
+      - type: isActionsLibraryCall
+        value: false
+        valueType: string
+      - type: customParams
+        value: ''
+        valueType: string
+      - type: successMapper
+        value: >-
+          {{data}}.map(({ id, status, user_id, begin_timestamp, end_timestamp })
+          => ({
+            id,
+            status,
+            user_id,
+            duration: dateDiff(end_timestamp, begin_timestamp)('year'),
+          }));
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '17006760150270.9093349797971861'
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.subscriptionDuration.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.subscriptionDuration.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.subscriptionDuration.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+index: 6

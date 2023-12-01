@@ -1,0 +1,182 @@
+id: '17007519413140.5090195745740189'
+definitionId: smartTable
+parentSlotId: '17004975332890.749747601228703'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 84
+      w: 12
+      h: 83
+  xs:
+    gridItem:
+      x: 0
+      y: 183
+      w: 24
+      h: 80
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "full_name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: >-
+    {{actions.loadSubscriptions.data}}.filter((subscription) =>
+    subscription.user_id === {{ui.usersTable.selectedRow.data}}.id);
+  name: userSubscriptionsTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: '{{ui.usersTable.selectedRow.data.username}} subscriptions '
+  showLoading:
+    value: false
+    dataValue: '{{actions.loadUsers.loading}} || {{actions.loadSubscriptions.loading}}'
+    withData: true
+  emptyMessage: User {{ui.usersTable.selectedRow.data.username}} has no subscriptions
+actions: {}
+slots:
+  - id: '17007519413140.008738104023266136'
+    name: columns
+    children:
+      - id: '17007520315640.12457381450049843'
+        definitionId: atomicNumber
+        parentSlotId: '17007519413140.008738104023266136'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber5
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '50'
+          filter: true
+        index: 0
+        slots: []
+      - id: '17007520315650.16843189016964688'
+        definitionId: atomicSelect
+        parentSlotId: '17007519413140.008738104023266136'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicSelect
+          prop: status
+          primaryKey: false
+          options:
+            value:
+              - value: trialing
+                color: primary
+                __UIBAKERY__SYSTEM_ID__: '17007520315650.4011627074181152'
+              - value: active
+                color: success
+                __UIBAKERY__SYSTEM_ID__: '17007520315650.3560387473177433'
+              - value: unpaid
+                color: warning
+                __UIBAKERY__SYSTEM_ID__: '17007520315650.6751533231017988'
+              - value: canceled
+                color: danger
+                __UIBAKERY__SYSTEM_ID__: '17007520315650.6180488363816807'
+            dataValue: |-
+              [
+                {
+                  value: 'trialing',
+                  color: 'primary'
+                },
+                {
+                  value: 'active',
+                  color: 'success'
+                },
+                {
+                  value: 'unpaid',
+                  color: 'warning'
+                },
+                {
+                  value: 'canceled',
+                  color: 'danger'
+                }
+              ]
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '75'
+          filter: true
+        index: 2
+        slots: []
+      - id: '17007520315650.2217601006327028'
+        definitionId: atomicDateTime
+        parentSlotId: '17007519413140.008738104023266136'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicDateTime
+          prop: begin_timestamp
+          primaryKey: false
+          timeFormat:
+            value: HH:mm:ss
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 3
+        slots: []
+      - id: '17007520315650.6725780665674796'
+        definitionId: atomicDateTime
+        parentSlotId: '17007519413140.008738104023266136'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicDateTime4
+          prop: end_timestamp
+          primaryKey: false
+          timeFormat:
+            value: HH:mm:ss
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 4
+        slots: []
+      - id: '17007520315640.5725152678325793'
+        definitionId: atomicNumber
+        parentSlotId: '17007519413140.008738104023266136'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber11
+          prop: price_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          width: '55'
+        index: 1
+        slots: []

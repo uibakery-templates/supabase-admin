@@ -1,0 +1,126 @@
+id: '17006425592360.6906277740163067'
+definitionId: smartTable
+parentSlotId: '17004975388150.38768580268871444'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 10
+      h: 66
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 80
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "full_name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.loadProducts.data}}'
+  name: publicProductsTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Products
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadProducts.loading}}'
+    value: false
+  limit: '5'
+actions: {}
+slots:
+  - id: '17006425592360.362387854696667'
+    name: columns
+    children:
+      - id: '17006425592880.07157141453300708'
+        definitionId: atomicNumber
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber2
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '50'
+          filter: true
+        parentSlotId: '17006425592360.362387854696667'
+        index: 0
+        slots: []
+      - id: '17006425592880.47186869737458337'
+        definitionId: atomicBoolean
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicBoolean
+          prop: active
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          filter: true
+        parentSlotId: '17006425592360.362387854696667'
+        index: 2
+        slots: []
+      - id: '17006425592880.5069858931656526'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString5
+          prop: name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '60'
+          filter: true
+        parentSlotId: '17006425592360.362387854696667'
+        index: 3
+        slots: []
+      - id: '17006425592880.46159717405782463'
+        definitionId: atomicImage
+        parentSlotId: '17006425592360.362387854696667'
+        styles:
+          xl:
+            visible: true
+            fit: cover
+            radius:
+              customValue: 0.25
+              customUnit: rem
+        properties:
+          name: atomicImage
+          prop: image_url
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          width: '60'
+          imageShape: square
+          title: Image
+        index: 1
+        slots: []

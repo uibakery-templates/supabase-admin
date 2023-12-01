@@ -1,0 +1,59 @@
+id: '17007536796630.5143528834985616'
+definitionId: metric
+parentSlotId: '17006760150280.5289670008586795'
+styles:
+  xl:
+    gridItem:
+      x: 18
+      y: 27
+      w: 6
+      h: 27
+  xs:
+    gridItem:
+      x: 0
+      y: 243
+      w: 24
+      h: 27
+properties:
+  data: >-
+    Object.entries(Object.groupBy({{actions.loadSubscriptions.data}}, ({ user_id
+    }) => user_id)).map(([userId, { length }]) => ({
+      userId,
+      subscriptionCount: length,
+    }));
+  name: averageNumberOfSubscriptionsMetric
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Average number of user subscriptions
+  operation: avg
+  groupType: not_group
+  showLoading:
+    value: false
+    dataValue: '{{actions.loadSubscriptions.loading}}'
+    withData: true
+actions: {}
+slots:
+  - id: '17007536796630.3344409998421085'
+    name: metricField
+    children:
+      - id: '17007539935290.6812706819314907'
+        definitionId: atomicNumber
+        parentSlotId: '17007536796630.3344409998421085'
+        styles: {}
+        properties:
+          name: atomicNumber12
+          prop: subscriptionCount
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          fraction: 3
+        index: 0
+        slots: []
+  - id: '17007536796630.2576127759017457'
+    name: additionalField
+    children: []
+  - id: '17007536797300.13218334415775979'
+    name: groupByField
+    children: []

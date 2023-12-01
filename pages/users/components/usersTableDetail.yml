@@ -1,0 +1,153 @@
+id: '17005044457410.705801841318636'
+definitionId: detail
+parentSlotId: '17004975332890.749747601228703'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 0
+      w: 12
+      h: 84
+  xs:
+    gridItem:
+      x: 0
+      y: 88
+      w: 24
+      h: 95
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "full_name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: '{{ui.usersTable.selectedRow.data}}'
+  name: usersTableDetail
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: '{{ui.usersTable.selectedRow.data.username}}'
+  heightMode: fixed
+  columns: '1'
+  showLoading:
+    value: false
+    dataValue: '{{actions.loadUsers.loading}}'
+    withData: true
+actions: {}
+slots:
+  - id: '17005044457410.07146150348442193'
+    name: structure
+    children:
+      - id: '17005045765390.43074666460736233'
+        definitionId: atomicNumber
+        parentSlotId: '17005044457410.07146150348442193'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber9
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          filter: true
+        index: 0
+        slots: []
+      - id: '17005045765390.22283837077650714'
+        definitionId: atomicString
+        parentSlotId: '17005044457410.07146150348442193'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString7
+          prop: username
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 1
+        slots: []
+      - id: '17005045765390.05622319558831412'
+        definitionId: atomicString
+        parentSlotId: '17005044457410.07146150348442193'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString8
+          prop: full_name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 3
+        slots: []
+      - id: '17005045765390.45966938266739255'
+        definitionId: atomicImage
+        parentSlotId: '17005044457410.07146150348442193'
+        styles:
+          xl:
+            visible: true
+            fit: cover
+        properties:
+          name: atomicImage3
+          prop: avatar_url
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          width: 120
+          title: Avatar
+          imageShape: oval
+        index: 2
+        slots: []
+      - id: '17005045765390.6366300402193195'
+        definitionId: atomicJsonEditor
+        parentSlotId: '17005044457410.07146150348442193'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicJsonEditor
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          prop: billing_address
+          lines: '5'
+        index: 4
+        slots: []
+      - id: '17005045765390.7078618269311963'
+        definitionId: atomicJsonEditor
+        parentSlotId: '17005044457410.07146150348442193'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicJsonEditor2
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          prop: payment_method
+        index: 5
+        slots: []

@@ -1,0 +1,119 @@
+id: '17010978209840.6574507009427855'
+definitionId: detail
+parentSlotId: '17004975844660.18081378834650486'
+styles:
+  xl:
+    gridItem:
+      x: 19
+      y: 87
+      w: 5
+      h: 80
+  xs:
+    gridItem:
+      x: 0
+      y: 261
+      w: 24
+      h: 82
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "full_name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: >-
+    {{actions.makeSubscriptions.data.mostSubscribedProducts.findLast(({ active
+    }) => active)}}
+  name: makesubscriptionsDetail
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Most subscribed active product
+  showLoading:
+    value: false
+    dataValue: '{{actions.makeSubscriptions.loading}}'
+    withData: true
+  showEditAction:
+    value: false
+    dataValue: 'false'
+    withData: false
+actions: {}
+slots:
+  - id: '17010978209840.3634360932162364'
+    name: structure
+    children:
+      - id: '17011029842790.8372500924115531'
+        definitionId: atomicNumber
+        parentSlotId: '17010978209840.3634360932162364'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber15
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 2
+        slots: []
+      - id: '17011029842790.6531307954189782'
+        definitionId: atomicString
+        parentSlotId: '17010978209840.3634360932162364'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString3
+          prop: name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+      - id: '17011029842790.13386768011665984'
+        definitionId: atomicNumber
+        parentSlotId: '17010978209840.3634360932162364'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber16
+          prop: occurrence
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          title: Number of subscribers
+        index: 3
+        slots: []
+      - id: '17011029842790.6459351757028351'
+        definitionId: atomicImage
+        parentSlotId: '17010978209840.3634360932162364'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicImage4
+          prop: image_url
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          title: Image
+        index: 1
+        slots: []

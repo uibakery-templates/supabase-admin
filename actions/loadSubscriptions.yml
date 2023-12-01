@@ -1,0 +1,71 @@
+id: '17004781044190.30870112091998436'
+kind: workflow
+name: loadSubscriptions
+nameConfigured: true
+steps:
+  - id: '17014257268120.16679785901811228'
+    type: LOAD_COLLECTION
+    name: load
+    params:
+      - type: resourceId
+        value: public.subscriptions
+        valueType: string
+      - type: filters
+        value: []
+        valueType: custom
+      - type: ordering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: end_timestamp
+          orderDirection:
+            value: asc
+        valueType: custom
+      - type: additionalParams
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+      - type: datasourceId
+        value: '[Sample] Supabase admin'
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+mode: manual
+modeConfigured: false
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.loadSubscriptions.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadSubscriptions.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.loadSubscriptions.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: true
+selected: true
+configured: true
+index: 1

@@ -1,0 +1,77 @@
+id: '17006651473970.13534158091679904'
+kind: workflow
+name: makeSubscriptions
+nameConfigured: true
+steps:
+  - id: '17006651844210.033669496885167405'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: >-
+          const [subscriptions, prices, products] = await
+          Promise.all([{{actions.loadSubscriptions.trigger()}},
+          {{actions.loadPrices.trigger()}},
+          {{actions.loadProducts.trigger()}}]);
+
+
+          const dayDateString = (date) => new
+          Date(date).toISOString().replace(/T.+$/, '');
+
+
+          const dates = sortedUniqueDates(subscriptions.flatMap(({
+          begin_timestamp, end_timestamp }) => [dayDateString(begin_timestamp),
+          dayDateString(end_timestamp)]));
+
+
+          const newSubscriptions = dates.map((date) => ({
+            date,
+            count: subscriptions.filter(({ begin_timestamp }) => date === dayDateString(begin_timestamp)).length,
+          }));
+
+
+          const mostSubscribedProducts = Object.entries(
+            subscriptions.reduce((histogram, { price_id }) => {
+              const { product_id } = prices.find(({ id }) => id === price_id);
+              histogram[product_id] = (histogram[product_id] ?? 0) + 1;
+              return histogram;
+            }, {})
+          )
+            .sort((lhs, rhs) => lhs[1] - rhs[1])
+            .map(([productId, occurrence]) => ({
+              ...products.find(({ id }) => id === productId),
+              occurrence,
+            }));
+
+          return {
+            newSubscriptions,
+            mostSubscribedProducts,
+          };
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '17004975844660.4478179487464613'
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.makeSubscriptions.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.makeSubscriptions.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.makeSubscriptions.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false
+index: 4

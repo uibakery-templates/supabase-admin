@@ -1,0 +1,41 @@
+storeItemList: []
+metadata:
+  favicon: ''
+  code: |-
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script>
+      const sortedUniqueDates = (dates) => [...new Set(dates)].sort((lhs, rhs) => new Date(lhs) - new Date(rhs));
+
+      const dateDiff = (lhs, rhs) => (units) => dayjs(lhs).diff(rhs, units, true);
+
+      /**
+       * @param {number} hue from 0 to 360
+       * @link https://stackoverflow.com/a/64090995/11261449
+       */
+      function hsl2rgb(hue) {
+        hue = (hue % 360) / 30;
+
+        const f = (n) => {
+          n = (n + hue) % 12;
+          return 0.5 * (1 - Math.max(Math.min(n - 3, 9 - n, 1), -1));
+        };
+
+        return `#${[f(0), f(8), f(4)]
+          .map((color) =>
+            Math.round(255 * color)
+              .toString(16)
+              .padStart(2, "0")
+          )
+          .join("")}`;
+      }
+    </script>
+  title: UIBAKERY SUPABASE ADMIN
+  description: ''
+  breakpoints: []
+appSettings:
+  properties:
+    defaultData: '{}'
+  actions: {}
+  gridVersion: 2
+  density: default
+internalType: project

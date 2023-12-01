@@ -1,0 +1,32 @@
+id: '17006760150270.9093349797971861'
+name: Home
+url: home
+roleIds: []
+disableInMenu: false
+parentPageId: ''
+index: 0
+slots:
+  - id: '17006760150270.6804194834804316'
+    name: content
+    children:
+      - id: '17006760150280.0853661439621809'
+        definitionId: grid
+        parentSlotId: '17006760150270.6804194834804316'
+        styles: {}
+        properties:
+          name: home
+          pageTitle: '{{app.name}} - {{activeRoute.name}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots:
+          - id: '17006760150280.5289670008586795'
+            name: content
+            children:
+              - components/activeSubscriptionsMetric.yml
+              - components/averageNumberOfSubscriptionsMetric.yml
+              - components/chart.yml
+              - components/subscriptionsDurationMetric.yml
+              - components/averageSubscriptionDuratioinMetric.yml
+              - components/subscriptionDurationChart.yml

@@ -1,0 +1,56 @@
+id: '17012820131790.7369381089410154'
+definitionId: chart
+parentSlotId: '17006760150280.5289670008586795'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 12
+      h: 54
+    legend:
+      visible: true
+      orientation: vertical
+      horizontal: right
+      vertical: top
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 80
+properties:
+  dataset: |-
+    Object.entries(
+      {{actions.subscriptionDuration.data}}.filter(({ status }) => /(active|canceled)/.test(status)).reduce((histogram, { user_id, duration }) => {
+        histogram[user_id] = Math.max(histogram[user_id] ?? 0, duration);
+        return histogram;
+      }, {})
+    ).map(([user_id, duration]) => ({
+      user_id,
+      duration,
+    }));
+  config: "return {\n \ttitle: {\n    text: 'Weekly Traffic',\n    padding: 10\n  },\n  tooltip: {\n    trigger: 'axis',\n    axisPointer: {\n      type: 'cross',\n      label: {\n      }\n    }\n  },\n  legend: {\n    data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine'],\n    padding: 30\n  },\n  grid: {\n    left: '3%',\n    right: '4%',\n    bottom: '3%',\n    containLabel: true\n  },\n  xAxis: [\n    {\n      type: 'category',\n      boundaryGap: false,\n      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']\n    }\n  ],\n  yAxis: [\n    {\n      type: 'value'\n    }\n  ],\n  series: [\n    {\n      name: 'Email',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [120, 132, 101, 134, 90, 230, 210]\n    },\n    {\n      name: 'Union Ads',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [220, 182, 191, 234, 290, 330, 310]\n    },\n    {\n      name: 'Video Ads',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [150, 232, 201, 154, 190, 330, 410]\n    },\n    {\n      name: 'Direct',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [320, 332, 301, 334, 390, 330, 320]\n    },\n    {\n      name: 'Search Engine',\n      type: 'line',\n      stack: 'Total',\n      areaStyle: {},\n      emphasis: {\n        focus: 'series'\n      },\n      data: [820, 932, 901, 934, 1290, 1330, 1320]\n    }\n  ]\n};"
+  name: subscriptionDurationChart
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Longet user subscription
+  type: barChart
+  structure:
+    - title: Subscriptions
+      data: []
+      color: primary
+      xProp: user_id
+      yProp: duration
+      __UIBAKERY__SYSTEM_ID__: '17013274920490.8274764859092305'
+      groupType: value
+      groupFunctionType: show_last
+      formatter: 'User ID {{x}}: {{y.toFixed(2)}} years'
+  showLoading:
+    value: false
+    dataValue: '{{actions.subscriptionDuration.loading}}'
+    withData: true
+  lineSmooth: false
+actions: {}
+slots: []

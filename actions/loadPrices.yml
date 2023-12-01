@@ -1,0 +1,74 @@
+id: '17004781427700.721509322224853'
+kind: workflow
+name: loadPrices
+nameConfigured: true
+steps:
+  - id: '17014257403590.08184694269749926'
+    type: LOAD_COLLECTION
+    name: load
+    params:
+      - type: resourceId
+        value: public.prices
+        valueType: custom
+        mustSelectFirst: true
+      - type: filters
+        value: []
+        valueType: custom
+        interpolationType: string
+      - type: ordering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+        interpolationType: string
+      - type: additionalParams
+        value: []
+        valueType: custom
+        interpolationType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+      - type: datasourceId
+        value: '[Sample] Supabase admin'
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: false
+    nameConfigured: true
+mode: manual
+modeConfigured: false
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadPrices.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadPrices.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.loadPrices.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: true
+selected: true
+configured: true
+index: 2

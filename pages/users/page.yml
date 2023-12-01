@@ -1,0 +1,29 @@
+id: '17004975332880.13749567302829502'
+name: Users
+url: users
+roleIds: []
+disableInMenu: false
+parentPageId: ''
+index: 1
+slots:
+  - id: '17004975332880.03178893689288853'
+    name: content
+    children:
+      - id: '17004975332880.9920429709080545'
+        definitionId: grid
+        parentSlotId: '17004975332880.03178893689288853'
+        styles: {}
+        properties:
+          name: users
+          pageTitle: '{{app.name}} - {{activeRoute.name}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots:
+          - id: '17004975332890.749747601228703'
+            name: content
+            children:
+              - components/usersTable.yml
+              - components/usersTableDetail.yml
+              - components/userSubscriptionsTable.yml

@@ -1,0 +1,31 @@
+id: '17004975844660.4478179487464613'
+name: Subscriptions
+url: subscriptions
+roleIds: []
+disableInMenu: false
+parentPageId: ''
+index: 2
+slots:
+  - id: '17004975844660.33964309435801265'
+    name: content
+    children:
+      - id: '17004975844660.19359538181865465'
+        definitionId: grid
+        parentSlotId: '17004975844660.33964309435801265'
+        styles: {}
+        properties:
+          name: subscriptions
+          pageTitle: '{{app.name}} - {{activeRoute.name}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots:
+          - id: '17004975844660.18081378834650486'
+            name: content
+            children:
+              - components/subscriptionsTable.yml
+              - components/subscriptionStatusChart.yml
+              - components/newSubscriptionsChart.yml
+              - components/makesubscriptionsDetail.yml
+              - components/makesubscriptionsChart2.yml

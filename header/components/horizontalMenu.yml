@@ -1,0 +1,53 @@
+id: '17004758706220.695695833263634'
+definitionId: horizontalMenu
+parentSlotId: '17004758598330.03733103003290261'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 10
+    logo:
+      url: ''
+      active: upload
+      uploadUrl: >-
+        https://sauibakeryprod.blob.core.windows.net/assets-container/assets/b6yhqryg98/images/Y6XtXECUsB
+      name: supabase-logo-icon.svg
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 10
+properties:
+  autoSyncItems: true
+  name: horizontalMenu
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  items: |-
+    [
+      {
+        title: 'Home',
+        link: '/home'
+      },
+      {
+        title: 'Users',
+        link: '/users'
+      },
+      {
+        title: 'Subscriptions',
+        link: '/subscriptions'
+      },
+      {
+        title: 'Products',
+        link: '/products'
+      }
+    ]
+  linkInfo:
+    active: internalPath
+    internalPath: '{{routes.home.url}}'
+    externalPath: ''
+actions: {}
+slots: []

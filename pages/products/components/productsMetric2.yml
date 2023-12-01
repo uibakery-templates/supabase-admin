@@ -1,0 +1,58 @@
+id: '17007556567950.6390425006969416'
+definitionId: metric
+parentSlotId: '17004975388150.38768580268871444'
+styles:
+  xl:
+    gridItem:
+      x: 4
+      y: 66
+      w: 6
+      h: 27
+  xs:
+    gridItem:
+      x: 12
+      y: 80
+      w: 12
+      h: 27
+properties:
+  data: >-
+    Object.entries(Object.groupBy({{actions.loadPrices.data}}, ({ product_id })
+    => product_id)).map(([productId, prices]) => ({
+      productId,
+      priceCount: prices.length,
+    }));
+  name: productsMetric2
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Average number of product prices
+  operation: avg
+  groupType: not_group
+  showLoading:
+    value: false
+    dataValue: '{{actions.loadPrices.loading}}'
+    withData: true
+actions: {}
+slots:
+  - id: '17007556567950.6537698788665565'
+    name: metricField
+    children:
+      - id: '17007561435060.48177730921373163'
+        definitionId: atomicNumber
+        parentSlotId: '17007556567950.6537698788665565'
+        styles: {}
+        properties:
+          name: atomicNumber14
+          prop: priceCount
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          fraction: 3
+        index: 0
+        slots: []
+  - id: '17007556567950.9876450263317609'
+    name: additionalField
+    children: []
+  - id: '17007556569360.7005053285285143'
+    name: groupByField
+    children: []

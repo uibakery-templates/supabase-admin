@@ -1,0 +1,53 @@
+id: '17007556460250.4546665016682707'
+definitionId: metric
+parentSlotId: '17004975388150.38768580268871444'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 66
+      w: 4
+      h: 27
+  xs:
+    gridItem:
+      x: 0
+      y: 80
+      w: 12
+      h: 27
+properties:
+  data: '{{actions.loadProducts.data}}'
+  name: productsMetric
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Number of products
+  operation: count
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadProducts.loading}}'
+    value: false
+actions: {}
+slots:
+  - id: '17007556460250.3408225626311081'
+    name: metricField
+    children:
+      - id: '17007556462100.0642095578749795'
+        definitionId: atomicNumber
+        styles: {}
+        properties:
+          name: atomicNumber13
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17007556460250.3408225626311081'
+        index: 0
+        slots: []
+  - id: '17007556460250.4739298049649172'
+    name: additionalField
+    children: []
+  - id: '17007556462100.284641303515917'
+    name: groupByField
+    children: []

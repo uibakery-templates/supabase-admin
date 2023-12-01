@@ -1,0 +1,164 @@
+id: '17006425971150.43746489604005934'
+definitionId: smartTable
+parentSlotId: '17004975388150.38768580268871444'
+styles:
+  xl:
+    gridItem:
+      x: 10
+      y: 0
+      w: 14
+      h: 166
+  xs:
+    gridItem:
+      x: 0
+      y: 187
+      w: 24
+      h: 93
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "full_name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.loadPrices.data}}'
+  name: publicPricesTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Prices
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadPrices.loading}}'
+    value: false
+  limit: '20'
+actions: {}
+slots:
+  - id: '17006425971150.033515495824913755'
+    name: columns
+    children:
+      - id: '17006427031780.6144587571139544'
+        definitionId: atomicNumber
+        parentSlotId: '17006425971150.033515495824913755'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber3
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '50'
+          filter: true
+        index: 0
+        slots: []
+      - id: '17006427031780.9187771392191397'
+        definitionId: atomicNumber
+        parentSlotId: '17006425971150.033515495824913755'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber4
+          prop: product_id
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '50'
+          filter: true
+        index: 1
+        slots: []
+      - id: '17006427031780.09525053860076627'
+        definitionId: atomicCurrency
+        parentSlotId: '17006425971150.033515495824913755'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicCurrency
+          prop: price
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '60'
+          filter: true
+          mappedValue: ''
+          currencyCode:
+            value: USD
+            dataValue: '{{row.currency}}'
+            withData: true
+          locale:
+            value: en-US
+            dataValue: en-US
+            withData: true
+        index: 2
+        slots: []
+      - id: '17006427031780.7109987838673963'
+        definitionId: atomicString
+        parentSlotId: '17006425971150.033515495824913755'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString6
+          prop: pricing
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '60'
+          filter: true
+        index: 3
+        slots: []
+      - id: '17006427031780.641271352607456'
+        definitionId: atomicString
+        parentSlotId: '17006425971150.033515495824913755'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString9
+          prop: pricing_plan
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '60'
+          filter: true
+        index: 4
+        slots: []
+      - id: '17006427031780.06246340642759751'
+        definitionId: atomicNumber
+        parentSlotId: '17006425971150.033515495824913755'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber10
+          prop: trial_period_days
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '80'
+          filter: true
+        index: 5
+        slots: []
