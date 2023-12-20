@@ -4,7 +4,6 @@ url: products
 roleIds: []
 disableInMenu: false
 parentPageId: ''
-index: 3
 slots:
   - id: '17004975388140.6405455440863403'
     name: content

@@ -71,4 +71,3 @@ config:
   preserveStateOnPageChange: true
 selected: true
 configured: true
-index: 2

@@ -1,17 +1,14 @@
-id: '17004781044190.30870112091998436'
+id: '17004761001230.4699762181942342'
 kind: workflow
-name: loadSubscriptions
+name: loadUsers
 nameConfigured: true
 steps:
-  - id: '17014257268120.16679785901811228'
+  - id: '17014256893960.45828621125231495'
     type: LOAD_COLLECTION
     name: load
     params:
-      - type: datasourceId
-        value: '[Sample] Supabase admin'
-        valueType: string
       - type: resourceId
-        value: public.subscriptions
+        value: public.users
         valueType: string
       - type: filters
         value: []
@@ -23,7 +20,7 @@ steps:
           offset:
             value: ''
           orderBy:
-            value: end_timestamp
+            value: ''
           orderDirection:
             value: asc
         valueType: custom
@@ -36,27 +33,16 @@ steps:
         value: ''
         valueType: interpolatedValue
       - type: successMapper
-        value: >-
-          const dayDateString = (date) => new
-          Date(date).toISOString().replace(/T.+$/, '');
-
-
-          return {{data}}.map(({ begin_timestamp, end_timestamp, ...rest }) => {
-            begin_timestamp = dayDateString(begin_timestamp);
-            end_timestamp = dayDateString(end_timestamp);
-            return {
-              ...rest,
-              begin_timestamp,
-              end_timestamp,
-              duration: dateDiff(end_timestamp, begin_timestamp),
-            };
-          });
+        value: ./load-successMapper.js
         valueType: interpolatedValue
       - type: failureMapper
         value: ''
         valueType: interpolatedValue
       - type: mapperEnabled
-        value: true
+        value: false
+        valueType: custom
+      - type: datasourceId
+        value: '[Sample] Supabase admin'
         valueType: custom
     level: 0
     fallthroughError: false
@@ -66,15 +52,13 @@ mode: manual
 modeConfigured: false
 config:
   shouldConfirm: false
-  confirmMessage: >-
-    Are you sure you'd like to proceed with
-    "{{actions.loadSubscriptions.name}}"?
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadUsers.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.loadSubscriptions.name}}" successfully executed
+  successToast: Action "{{actions.loadUsers.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.loadSubscriptions.name}}" has failed
+  errorToast: Action "{{actions.loadUsers.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
@@ -82,4 +66,3 @@ config:
   preserveStateOnPageChange: true
 selected: true
 configured: true
-index: 1
