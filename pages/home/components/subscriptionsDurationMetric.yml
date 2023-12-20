@@ -15,11 +15,7 @@ styles:
       w: 24
       h: 28
 properties:
-  data: |-
-    {{actions.loadSubscriptions.data}}.map(({ duration, ...rest }) => ({
-      ...rest,
-      duration: duration.year / 10,
-    }));
+  data: '{{actions.subscriptionDuration.data}}'
   name: subscriptionsDurationMetric
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
@@ -29,7 +25,7 @@ properties:
   groupType: not_group
   showLoading:
     value: false
-    dataValue: '{{actions.loadSubscriptions.loading}}'
+    dataValue: '{{actions.subscriptionDuration.loading}}'
     withData: true
 actions: {}
 slots:
@@ -46,7 +42,7 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
-          mappedValue: '{{value.toFixed(2)}} decades'
+          mappedValue: '{{(value / 10).toFixed(1)}} decades'
         index: 0
         slots: []
   - id: '17012411000230.9794368332053711'

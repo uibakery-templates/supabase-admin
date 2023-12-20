@@ -22,8 +22,8 @@ styles:
 properties:
   dataset: |-
     Object.entries(
-      {{actions.loadSubscriptions.data}}.filter(({ status }) => /(active|canceled)/.test(status)).reduce((histogram, { user_id, duration }) => {
-        histogram[user_id] = Math.max(histogram[user_id] ?? 0, duration.year);
+      {{actions.subscriptionDuration.data}}.filter(({ status }) => /(active|canceled)/.test(status)).reduce((histogram, { user_id, duration }) => {
+        histogram[user_id] = Math.max(histogram[user_id] ?? 0, duration);
         return histogram;
       }, {})
     ).map(([user_id, duration]) => ({
@@ -49,7 +49,7 @@ properties:
       formatter: 'User ID {{x}}: {{y.toFixed(2)}} years'
   showLoading:
     value: false
-    dataValue: '{{actions.loadSubscriptions.loading}}'
+    dataValue: '{{actions.subscriptionDuration.loading}}'
     withData: true
   lineSmooth: false
 actions: {}

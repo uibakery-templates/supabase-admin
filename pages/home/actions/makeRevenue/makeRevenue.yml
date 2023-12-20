@@ -1,0 +1,36 @@
+id: '17006766281980.7888214513790028'
+kind: workflow
+name: makeRevenue
+nameConfigured: true
+steps:
+  - id: '17006799350230.812813906517323'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '17006760150270.9093349797971861'
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.makeRevenue.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.makeRevenue.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.makeRevenue.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

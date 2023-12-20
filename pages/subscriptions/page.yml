@@ -4,7 +4,6 @@ url: subscriptions
 roleIds: []
 disableInMenu: false
 parentPageId: ''
-index: 2
 slots:
   - id: '17004975844660.33964309435801265'
     name: content

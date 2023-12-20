@@ -4,7 +4,6 @@ url: home
 roleIds: []
 disableInMenu: false
 parentPageId: ''
-index: 0
 slots:
   - id: '17006760150270.6804194834804316'
     name: content
