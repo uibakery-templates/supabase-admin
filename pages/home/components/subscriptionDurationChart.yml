@@ -30,7 +30,7 @@ properties:
   title: Number of subscriptions by duration
   type: barChart
   structure:
-    - title: Subscriptionduration
+    - title: Duration
       data: []
       color: primary
       xProp: duration
