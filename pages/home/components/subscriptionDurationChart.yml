@@ -20,6 +20,7 @@ styles:
       w: 24
       h: 80
 properties:
+  lineSmooth: false
   dataset: |-
     Object.entries(
       {{actions.subscriptionDuration.data}}.filter(({ status }) => /(active|canceled)/.test(status)).reduce((histogram, { user_id, duration }) => {
@@ -51,6 +52,7 @@ properties:
     value: false
     dataValue: '{{actions.subscriptionDuration.loading}}'
     withData: true
-  lineSmooth: false
+  barsWidth: '70'
+  barsRounderdCorners: false
 actions: {}
 slots: []

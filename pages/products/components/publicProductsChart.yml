@@ -20,6 +20,7 @@ styles:
       w: 24
       h: 80
 properties:
+  lineSmooth: true
   dataset: >-
     {{actions.loadProducts.data}}.map((product) => ({ name: product.name, count:
     {{actions.loadPrices.data}}.filter((price) => price.product_id ===
@@ -49,5 +50,7 @@ properties:
     dataValue: '{{actions.loadProducts.loading}}'
     value: false
   valueLabel: outside
+  barsWidth: 30
+  barsRounderdCorners: true
 actions: {}
 slots: []

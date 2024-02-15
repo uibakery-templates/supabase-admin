@@ -15,6 +15,7 @@ styles:
       w: 24
       h: 80
 properties:
+  lineSmooth: true
   dataset: |-
     [
       {
@@ -428,5 +429,7 @@ properties:
     dataValue: '{{actions.makeRevenue.loading}}'
     withData: true
   useJsConfig: echarts
+  barsWidth: 30
+  barsRounderdCorners: true
 actions: {}
 slots: []
