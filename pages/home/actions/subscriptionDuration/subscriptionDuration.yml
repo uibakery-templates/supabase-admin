@@ -28,6 +28,17 @@ steps:
     level: 0
     fallthroughError: false
     isChanged: true
+  - id: '17079892723750.8348168219872418'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
 mode: manual
 modeConfigured: false
 parentPageId: '17006760150270.9093349797971861'
