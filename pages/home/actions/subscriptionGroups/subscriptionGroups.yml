@@ -1,30 +1,41 @@
-id: '17013266235670.9317115634945585'
+id: '17079904081320.9709927013818878'
 kind: workflow
-name: subscriptionDuration
+name: subscriptionGroups
 nameConfigured: true
 steps:
-  - id: '17013266293800.2852752327623258'
+  - id: '17079904229700.8358128400173619'
     type: executeAction
     name: execute
     params:
       - type: action
-        value: '17004781044190.30870112091998436'
+        value: '17013266235670.9317115634945585'
         valueType: string
       - type: isActionsLibraryCall
         value: false
         valueType: string
       - type: customParams
-        value: ''
+        value: ./execute-customParams.js
         valueType: string
       - type: successMapper
-        value: ./execute-successMapper.js
+        value: ''
         valueType: interpolatedValue
       - type: failureMapper
         value: ''
         valueType: interpolatedValue
       - type: mapperEnabled
-        value: true
+        value: false
         valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17079904322200.5437119441316556'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
     level: 0
     fallthroughError: false
     isChanged: true
@@ -36,13 +47,13 @@ config:
   shouldConfirm: false
   confirmMessage: >-
     Are you sure you'd like to proceed with
-    "{{actions.subscriptionDuration.name}}"?
+    "{{actions.subscriptionGroups.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.subscriptionDuration.name}}" successfully executed
+  successToast: Action "{{actions.subscriptionGroups.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.subscriptionDuration.name}}" has failed
+  errorToast: Action "{{actions.subscriptionGroups.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
